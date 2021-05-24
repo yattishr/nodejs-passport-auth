@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+require('dotenv').config();
+
 
 // Passport config
 require('./config/passport')(passport);
+
 
 const PORT= process.env.PORT || 5000
 
@@ -14,7 +17,6 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Db config
 const db = require('./config/keys').mongoURI;
-
 
 // Connect to MongoDb
 mongoose.connect(db, { useNewUrlParser: true})
