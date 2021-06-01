@@ -50,9 +50,10 @@
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
         </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          Register
-        </button>        
+        <div class="d-grid gap-2 m-2">
+          <button type="submit" class="btn btn-primary" type="button">Register</button>
+          <a class="btn btn-secondary btn-block" role="button" href="/">Go Back</a>
+        </div>        
 
       </form>
       <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
